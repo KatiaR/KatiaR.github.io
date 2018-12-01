@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+	<title>reveal.js</title>
+
+	<link rel="stylesheet" href="css/reveal.css" />
+	<link rel="stylesheet" href="css/theme/black.css" />
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css" />
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement("link");
+		link.rel = "stylesheet";
+		link.type = "text/css";
+		link.href = window.location.search.match(/print-pdf/gi)
+			? "css/print/pdf.css"
+			: "css/print/paper.css";
+		document.getElementsByTagName("head")[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>
+				<img src="../img/npm.png" alt="npm-logo" />
+				<h1>node package manager</h1>
+				<p>is the world’s largest software registry</p>
+			</section>
+			<section>
+				<figure>
+					<img class="img-border" src="../img/Isaac_Schlueter.png" alt="photo_Isaac_Schlueter" />
+					<figcaption>Isaac Z. Schlueter</figcaption>
+					<p>npm was developed by Isaac Z. Schlueter in 2009</p>
+				</figure>
+			</section>
+			<section class="about">
+					<img src="../img/packages.png" alt="image-box" />
+					<figcaption class="about-npm"> Over 700,000 of free packages are available on the main npm registry.
+						</figcaption>
+						<p class="about-npm">Npm has 12 million users, and they download 5 billion packages a week.
+							 More than 150,000 companies, including BBC, Coinbase, eBay, Electronic Arts, Slack rely on npm’s products and services.
+						</p>
+					
+			</section>
+			<section id="fragments">
+				<h3>Npm consists of three distinct components:</h3>
+				<div class="npm-components">
+					<figure class="fragment">
+						<img class="components" src="../img/npm_website.png" alt="npm-website_photo" />
+						<figcaption class="description">the website</figcaption>
+					</figure>
+					<figure class="fragment">
+						<img  class="components registry" src="../img/registry.png" alt="npm-registry_photo" />
+						<figcaption class="description">the registry</figcaption>
+					</figure>
+					<figure class="fragment">
+						<img class="components" src="../img/cli.png" alt="npm-cli_photo" />
+						<figcaption class="description">the Command Line Interface (CLI)
+						</figcaption>
+					</figure>
+				</div>
+			</section>
+			<section class="instruction">
+				<h3>
+					Install package
+				</h3>
+				<p>npm is installed with Node.js</p>
+				<ul>
+					<li>Download and install Node.js<a href="https://nodejs.org">(click here)</a></li>
+					<li>Find packages to use <a href="https://www.npmjs.com/">on the website</a></li>
+					<li>Run the following command on the command line</li>
+					<ul class="intall-package">
+						<li>npm install &#60package&#62 </li>
+						<li>npm install -g &#60package&#62 </li>
+					</ul>
+				</ul>
+				<dl class="fragment">
+					<dt>locally-</dt>
+					<dd>the module would be installed in the current working directory
+						./node_modules.</dd>
+					<dt>globally-</dt>
+					<dd> in {prefix}/lib/node_modules, and puts executable files in {prefix}/bin
+					</dd>
+				</dl>
+			</section>
+			<section class="work-packages">
+				<div>
+					<h3>Uninstall a package</h3>
+					<ul>
+						<li>npm uninstall &#60package&#62</li>
+						<li>npm uninstall -g &#60package&#62</li>
+					</ul>
+				</div>
+				<div class="fragment">
+					<h3>Update a package</h3>
+					<ul>
+						<li>npm update &#60package&#62</li>
+						<li>npm update -g &#60package&#62</li>
+					</ul>
+				</div>
+				<div class="fragment">
+					<h3>Clear the cache </h3>
+					<ul>
+						<li>npm cache clean</li>
+
+					</ul>
+				</div>
+
+
+			</section>
+			
+			<section>
+					<section>
+							<h4>package.json</h4>
+							<img class="package-json" src="../img/package-json.png" alt="exaple-package-json" />
+						</section>
+						<section class="package-json-parts">
+								<img src="../img/dependencies.png" alt="exaple-dependencies"/>
+								<div class="way-install">npm install &#60package&#62</div>
+								<img class="fragment" src="../img/devDependencies.png" alt="exaple-devDependencies"/>
+								<div class="way-install-save-dev fragment">npm install &#60package&#62 --save-dev</div>
+								<img class="fragment" src="../img/scripts.png" alt="exaple-scripts"/>
+							</section>
+			</section>
+			<section>
+					<section>
+							<img  src="../img/scripts-npm.png" alt="npm-scripts" />
+								</section>
+						<section>
+								<h4>NPM Scripts</h4>
+								<ul>
+									<li>Custom Scripts<a href="https://docs.npmjs.com/misc/scripts.html">(full list here)</a></li>
+									<li>Calling NPM Scripts Within Other NPM Scripts</li>
+									</ul>
+								
+							</section>
+							<section>
+									<h4>Custom Scripts</h4>
+									<pre><code class="hljs" data-trim contenteditable>
+									….
+										"scripts": {
+											"say-hello": "echo 'Hello World'"
+										}
+									</code></pre>
+									<p>Basic custom NPM script that outputs “hello world” to the consol</p>
+									<p class="intall-package"> npm run say-hello</p>
+							</section>
+							<section>
+									<h4>Calling NPM Scripts Within Other NPM Scripts</h4>
+									<pre><code class="hljs" data-trim contenteditable>
+											...
+											"scripts": {
+											   "say-hello": "echo 'Hello World'",
+											   "awesome-npm": "npm run say-hello && echo 'echo NPM is awesome!'"
+											}
+											
+									</code></pre>
+									<p>When you run npm run awesome-npm, the second command executes after the successful execution of the first command. </p>
+								
+							</section>
+			</section>
+			<section>
+				<p>Thanks for attention	</p>
+				<p>sources used</p>
+				<a href="https://nodejs.org">nodejs</a>
+				<a href="https://docs.npmjs.com/">npmjs</a>
+				<a href="https://medium.freecodecamp.org/introduction-to-npm-scripts-1dbb2ae01633">scripts</a>
+
+			</section>
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		Reveal.initialize({
+			dependencies: [
+				{ src: "plugin/markdown/marked.js" },
+				{ src: "plugin/markdown/markdown.js" },
+				{ src: "plugin/notes/notes.js", async: true },
+				{
+					src: "plugin/highlight/highlight.js",
+					async: true,
+					callback: function () {
+						hljs.initHighlightingOnLoad();
+					}
+				}
+			]
+		});
+	</script>
+</body>
+
+</html>
