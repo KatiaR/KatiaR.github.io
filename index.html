@@ -41,13 +41,14 @@
 				</figure>
 			</section>
 			<section class="about">
-					<img src="../img/packages.png" alt="image-box" />
-					<figcaption class="about-npm"> Over 700,000 of free packages are available on the main npm registry.
-						</figcaption>
-						<p class="about-npm">Npm has 12 million users, and they download 5 billion packages a week.
-							 More than 150,000 companies, including BBC, Coinbase, eBay, Electronic Arts, Slack rely on npm’s products and services.
-						</p>
-					
+				<img src="../img/packages.png" alt="image-box" />
+				<figcaption class="about-npm"> Over 700,000 of free packages are available on the main npm registry.
+				</figcaption>
+				<p class="about-npm">Npm has 12 million users, and they download 5 billion packages a week.
+					More than 150,000 companies, including BBC, Coinbase, eBay, Electronic Arts, Slack rely on npm’s products and
+					services.
+				</p>
+
 			</section>
 			<section id="fragments">
 				<h3>Npm consists of three distinct components:</h3>
@@ -57,7 +58,7 @@
 						<figcaption class="description">the website</figcaption>
 					</figure>
 					<figure class="fragment">
-						<img  class="components registry" src="../img/registry.png" alt="npm-registry_photo" />
+						<img class="components registry" src="../img/registry.png" alt="npm-registry_photo" />
 						<figcaption class="description">the registry</figcaption>
 					</figure>
 					<figure class="fragment">
@@ -68,27 +69,38 @@
 				</div>
 			</section>
 			<section class="instruction">
-				<h3>
-					Install package
-				</h3>
-				<p>npm is installed with Node.js</p>
-				<ul>
-					<li>Download and install Node.js<a href="https://nodejs.org">(click here)</a></li>
-					<li>Find packages to use <a href="https://www.npmjs.com/">on the website</a></li>
-					<li>Run the following command on the command line</li>
-					<ul class="intall-package">
-						<li>npm install &#60package&#62 </li>
-						<li>npm install -g &#60package&#62 </li>
-					</ul>
-				</ul>
-				<dl class="fragment">
-					<dt>locally-</dt>
-					<dd>the module would be installed in the current working directory
-						./node_modules.</dd>
-					<dt>globally-</dt>
-					<dd> in {prefix}/lib/node_modules, and puts executable files in {prefix}/bin
-					</dd>
-				</dl>
+				<section>
+					<h3>
+						Install package
+					</h3>
+					<p class="size-p">Npm is installed with Node.js. </p>
+					<a href="https://nodejs.org"> Download and install Node.js</a>
+					<img src="../img/node.png" alt="node-website" />
+				</section>
+				<section>
+						<p>Find packages to use <a href="https://www.npmjs.com/">on the website</a></P>
+					 
+						<img src="../img/package.png" alt="npm-website" />
+	
+					</section>
+				<section>
+					<p>Run the following command on the command line<p>
+							<ul class="intall-package">
+								<li>npm install &#60package&#62 </li>
+								<li>npm install -g &#60package&#62 </li>
+							</ul>
+							</ul>
+							<dl class="fragment">
+								<dt>locally-</dt>
+								<dd>the module would be installed in the current working directory
+									./node_modules.</dd>
+								<dt>globally-</dt>
+								<dd> in {prefix}/lib/node_modules, and puts executable files in {prefix}/bin
+								</dd>
+							</dl>
+				</section>
+				
+
 			</section>
 			<section class="work-packages">
 				<div>
@@ -115,46 +127,74 @@
 
 
 			</section>
-			
-			<section>
-					<section>
-							<h4>package.json</h4>
-							<img class="package-json" src="../img/package-json.png" alt="exaple-package-json" />
+			<section class="create-package">
+				<section>
+					<h2>Steps to Publish</h2>
+					<p>code => test => publish => revise code => test => publish new version ...</p>
+				</section>
+				<section>
+					<p>Create a new directory and enter the following command from terminal</p>
+					<pre><code data-trim contenteditable>
+					npm init												
+					</code></pre>
+					<p class="size-p">Enter meaningful name and appropriate details for your package. This will create the package.json for you. All NPM
+						packages need main key. This defines the entry point to our library. By default this will be index.js but you can
+						change it whatever you want your entry point to be.
+					For Babel or bundle based libraries, the entry point will usually be in the build dir.</p>
+				</section>
+				<section>
+			<h3>Publish</h3>
+			<p class="size-p">Once your code is thoroughly tested, it is ready to be published. Run this command from the terminal</p>
+			<pre><code data-trim contenteditable>
+					npm publish												
+					</code></pre>
+<p class="size-p">This will publish your package to NPM registry. If you want to make changes to your package, you have to change the version number and publish again.</p>			
 						</section>
-						<section class="package-json-parts">
-								<img src="../img/dependencies.png" alt="exaple-dependencies"/>
-								<div class="way-install">npm install &#60package&#62</div>
-								<img class="fragment" src="../img/devDependencies.png" alt="exaple-devDependencies"/>
-								<div class="way-install-save-dev fragment">npm install &#60package&#62 --save-dev</div>
-								<img class="fragment" src="../img/scripts.png" alt="exaple-scripts"/>
-							</section>
+						<section>
+								<img src="../img/semver.png" alt="version-description" />
+						</section>
+			</section>
+
+
+			<section>
+				<section>
+					<h4>package.json</h4>
+					<img class="package-json" src="../img/package-json.png" alt="exaple-package-json" />
+				</section>
+				<section class="package-json-parts">
+					<img src="../img/dependencies.png" alt="exaple-dependencies" />
+					<div class="way-install">npm install &#60package&#62</div>
+					<img class="fragment" src="../img/devDependencies.png" alt="exaple-devDependencies" />
+					<div class="way-install-save-dev fragment">npm install &#60package&#62 --save-dev</div>
+					<img class="fragment" src="../img/scripts.png" alt="exaple-scripts" />
+				</section>
 			</section>
 			<section>
-					<section>
-							<img  src="../img/scripts-npm.png" alt="npm-scripts" />
-								</section>
-						<section>
-								<h4>NPM Scripts</h4>
-								<ul>
-									<li>Custom Scripts<a href="https://docs.npmjs.com/misc/scripts.html">(full list here)</a></li>
-									<li>Calling NPM Scripts Within Other NPM Scripts</li>
-									</ul>
-								
-							</section>
-							<section>
-									<h4>Custom Scripts</h4>
-									<pre><code class="hljs" data-trim contenteditable>
+				<section>
+					<img src="../img/scripts-npm.png" alt="npm-scripts" />
+				</section>
+				<section>
+					<h4>NPM Scripts</h4>
+					<ul>
+						<li>Custom Scripts<a href="https://docs.npmjs.com/misc/scripts.html">(full list here)</a></li>
+						<li>Calling NPM Scripts Within Other NPM Scripts</li>
+					</ul>
+
+				</section>
+				<section>
+					<h4>Custom Scripts</h4>
+					<pre><code class="hljs" data-trim contenteditable>
 									….
 										"scripts": {
 											"say-hello": "echo 'Hello World'"
 										}
 									</code></pre>
-									<p>Basic custom NPM script that outputs “hello world” to the consol</p>
-									<p class="intall-package"> npm run say-hello</p>
-							</section>
-							<section>
-									<h4>Calling NPM Scripts Within Other NPM Scripts</h4>
-									<pre><code class="hljs" data-trim contenteditable>
+					<p>Basic custom NPM script that outputs “hello world” to the consol</p>
+					<p class="intall-package"> npm run say-hello</p>
+				</section>
+				<section>
+					<h4>Calling NPM Scripts Within Other NPM Scripts</h4>
+					<pre><code class="hljs" data-trim contenteditable>
 											...
 											"scripts": {
 											   "say-hello": "echo 'Hello World'",
@@ -162,12 +202,13 @@
 											}
 											
 									</code></pre>
-									<p>When you run npm run awesome-npm, the second command executes after the successful execution of the first command. </p>
-								
-							</section>
+					<p>When you run npm run awesome-npm, the second command executes after the successful execution of the first
+						command. </p>
+
+				</section>
 			</section>
 			<section>
-				<p>Thanks for attention	</p>
+				<p>Thanks for attention </p>
 				<p>sources used</p>
 				<a href="https://nodejs.org">nodejs</a>
 				<a href="https://docs.npmjs.com/">npmjs</a>

@@ -386,7 +386,7 @@ figcaption.description {
 	background-color: rgba(129, 129, 126, 1);
 	
 }
-.about .about-npm {
+.about .about-npm, .instruction .size-p, .create-package .size-p {
 	font-size: 1.5rem;
 }
 
