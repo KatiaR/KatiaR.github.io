@@ -58,7 +58,7 @@
 						<figcaption class="description">the website</figcaption>
 					</figure>
 					<figure class="fragment">
-						<img class="components registry" src="../img/registry.png" alt="npm-registry_photo" />
+						<img  class="components registry" src="../img/registry.png" alt="npm-registry_photo" />
 						<figcaption class="description">the registry</figcaption>
 					</figure>
 					<figure class="fragment">
@@ -127,36 +127,7 @@
 
 
 			</section>
-			<section class="create-package">
-				<section>
-					<h2>Steps to Publish</h2>
-					<p>code => test => publish => revise code => test => publish new version ...</p>
-				</section>
-				<section>
-					<p>Create a new directory and enter the following command from terminal</p>
-					<pre><code data-trim contenteditable>
-					npm init												
-					</code></pre>
-					<p class="size-p">Enter meaningful name and appropriate details for your package. This will create the package.json for you. All NPM
-						packages need main key. This defines the entry point to our library. By default this will be index.js but you can
-						change it whatever you want your entry point to be.
-					For Babel or bundle based libraries, the entry point will usually be in the build dir.</p>
-				</section>
-				<section>
-			<h3>Publish</h3>
-			<p class="size-p">Once your code is thoroughly tested, it is ready to be published. Run this command from the terminal</p>
-			<pre><code data-trim contenteditable>
-					npm publish												
-					</code></pre>
-<p class="size-p">This will publish your package to NPM registry. If you want to make changes to your package, you have to change the version number and publish again.</p>			
-						</section>
 						<section>
-								<img src="../img/semver.png" alt="version-description" />
-						</section>
-			</section>
-
-
-			<section>
 				<section>
 					<h4>package.json</h4>
 					<img class="package-json" src="../img/package-json.png" alt="exaple-package-json" />
@@ -169,6 +140,35 @@
 					<img class="fragment" src="../img/scripts.png" alt="exaple-scripts" />
 				</section>
 			</section>
+			<section class="create-package">
+					<section>
+						<h2>Steps to Publish</h2>
+						<p>code => test => publish => revise code => test => publish new version ...</p>
+					</section>
+					<section>
+						<p>Create a new directory and enter the following command from terminal</p>
+						<pre><code data-trim contenteditable>
+						npm init												
+						</code></pre>
+						<p class="size-p">Enter meaningful name and appropriate details for your package. This will create the package.json for you. All NPM
+							packages need main key. This defines the entry point to our library. By default this will be index.js but you can
+							change it whatever you want your entry point to be.
+						For Babel or bundle based libraries, the entry point will usually be in the build dir.</p>
+					</section>
+					<section>
+				<h3>Publish</h3>
+				<p class="size-p">Once your code is thoroughly tested, it is ready to be published. Run this command from the terminal</p>
+				<pre><code data-trim contenteditable>
+						npm publish												
+						</code></pre>
+	<p class="size-p">This will publish your package to NPM registry. If you want to make changes to your package, you have to change the version number and publish again.</p>			
+							</section>
+							<section>
+								<h3>npm-version</h3>
+									<img src="../img/semver.png" alt="version-description" />
+							</section>
+				</section>
+	
 			<section>
 				<section>
 					<img src="../img/scripts-npm.png" alt="npm-scripts" />

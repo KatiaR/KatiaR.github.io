@@ -342,12 +342,17 @@ body {
 }
 
 .npm-components {
-    display: flex;
+	display: flex;
+	vertical-align: center;
+	justify-content: center;
 }
-.npm-components .registry {
+.npm-components figure {
+	width: 33%;
+}
+.npm-components .registry img{
 	width: 80%;
-	
 }
+
 figcaption.description {
     font-size: 1.3rem;
 }
