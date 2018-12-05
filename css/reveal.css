@@ -357,9 +357,20 @@ figcaption.description {
     font-size: 1.3rem;
 }
 
-.work-packages ul, .intall-package {
+.work-packages ul, .intall-package, .about-package-json .init-package-json {
     background-color: rgba(129, 129, 126, 0.4);
     font-size: 2rem;
+}
+.about-package-json .init-package-json {
+	background-color: rgba(129, 129, 126, 1);
+	font-size: 2rem;
+	position: absolute;
+	top: 300px;
+    right: 150px;
+    padding: 0 15px;
+}
+.about-package-json .init-package-json p {
+	margin: 0;
 }
 
 .work-packages div {
@@ -391,7 +402,7 @@ figcaption.description {
 	background-color: rgba(129, 129, 126, 1);
 	
 }
-.about .about-npm, .instruction .size-p, .create-package .size-p {
+.about .about-npm, .instruction .size-p, .create-package .size-p, .package-lock .size-p {
 	font-size: 1.5rem;
 }
 
