@@ -37,7 +37,7 @@
 				<figure>
 					<img class="img-border" src="../img/Isaac_Schlueter.png" alt="photo_Isaac_Schlueter" />
 					<figcaption>Isaac Z. Schlueter</figcaption>
-					<p>npm was developed by Isaac Z. Schlueter in 2009</p>
+					<p>npm was developed by Isaac Z. Schlueter <br> in 2009</p>
 				</figure>
 			</section>
 			<section class="about">
@@ -45,7 +45,7 @@
 				<figcaption class="about-npm"> Over 700,000 of free packages are available on the main npm registry.
 				</figcaption>
 				<p class="about-npm">Npm has 12 million users, and they download 5 billion packages a week.
-					More than 150,000 companies, including BBC, Coinbase, eBay, Electronic Arts, Slack rely on npm’s products and
+					More than 150,000 companies, <br> including BBC, Coinbase, eBay, Electronic Arts, Slack <br> rely on npm’s products and
 					services.
 				</p>
 
@@ -58,7 +58,7 @@
 						<figcaption class="description">the website</figcaption>
 					</figure>
 					<figure class="fragment">
-						<img  class="components registry" src="../img/registry.png" alt="npm-registry_photo" />
+						<img class="components registry" src="../img/registry.png" alt="npm-registry_photo" />
 						<figcaption class="description">the registry</figcaption>
 					</figure>
 					<figure class="fragment">
@@ -78,11 +78,11 @@
 					<img src="../img/node.png" alt="node-website" />
 				</section>
 				<section>
-						<p>Find packages to use <a href="https://www.npmjs.com/">on the website</a></P>
-					 
-						<img src="../img/package.png" alt="npm-website" />
-	
-					</section>
+					<p>Find packages to use <a href="https://www.npmjs.com/">on the website</a></P>
+
+					<img src="../img/package.png" alt="npm-website" />
+
+				</section>
 				<section>
 					<p>Run the following command on the command line<p>
 							<ul class="intall-package">
@@ -99,7 +99,7 @@
 								</dd>
 							</dl>
 				</section>
-				
+
 
 			</section>
 			<section class="work-packages">
@@ -127,13 +127,13 @@
 
 
 			</section>
-						<section class='about-package-json'>
+			<section class='about-package-json'>
 				<section>
 					<h4>package.json</h4>
 					<img class="package-json" src="../img/package-json.png" alt="exaple-package-json" />
 					<div class="init-package-json">
 						<p>npm init<br>npm init --yes</p>
-						
+
 					</div>
 				</section>
 				<section class="package-json-parts">
@@ -145,34 +145,37 @@
 				</section>
 			</section>
 			<section class="create-package">
-					<section>
-						<h2>Steps to Publish</h2>
-						<p>code => test => publish => revise code => test => publish new version ...</p>
-					</section>
-					<section>
-						<p>Create a new directory and enter the following command from terminal</p>
-						<pre><code data-trim contenteditable>
+				<section>
+					<h2>Steps to Publish</h2>
+					<p>code => test => publish => revise code => test => publish new version ...</p>
+				</section>
+				<section>
+					<p>Create a new directory and enter the following command from terminal</p>
+					<pre><code data-trim contenteditable>
 						npm init												
 						</code></pre>
-						<p class="size-p">Enter meaningful name and appropriate details for your package. This will create the package.json for you. All NPM
-							packages need main key. This defines the entry point to our library. By default this will be index.js but you can
-							change it whatever you want your entry point to be.
-						</p>
-					</section>
-					<section>
-				<h3>Publish</h3>
-				<p class="size-p">Once your code is thoroughly tested, it is ready to be published. Run this command from the terminal</p>
-				<pre><code data-trim contenteditable>
+					<p class="size-p">Enter meaningful name and appropriate details for your package. This will create the
+						package.json for you. All NPM
+						packages need main key. This defines the entry point to our library. By default this will be index.js but you can
+						change it whatever you want your entry point to be.
+					</p>
+				</section>
+				<section>
+					<h3>Publish</h3>
+					<p class="size-p">Once your code is thoroughly tested, it is ready to be published. Run this command from the
+						terminal</p>
+					<pre><code data-trim contenteditable>
 						npm publish												
 						</code></pre>
-	<p class="size-p">This will publish your package to NPM registry. If you want to make changes to your package, you have to change the version number and publish again.</p>			
-							</section>
-							<section>
-								<h3>npm-version</h3>
-									<img src="../img/semver.png" alt="version-description" />
-							</section>
+					<p class="size-p">This will publish your package to NPM registry. If you want to make changes to your package, you
+						have to change the version number and publish again.</p>
 				</section>
-	
+				<section>
+					<h3>npm-version</h3>
+					<img src="../img/semver.png" alt="version-description" />
+				</section>
+			</section>
+
 			<section>
 				<section>
 					<img src="../img/scripts-npm.png" alt="npm-scripts" />
@@ -189,23 +192,25 @@
 				<section>
 					<h4>NPM Scripts</h4>
 					<ul>
-						<li>Scripts  execute automatically</li>
+						<li>Scripts execute automatically</li>
 						<li>Custom Scripts</li>
 						<li>Calling NPM Scripts Within Other NPM Scripts</li>
 					</ul>
 
 				</section>
 				<section>
-						<h4>Scripts  execute automatically</h4>
-						<ul>
-							<li>prepublish: Run BEFORE the package is packed and published, as well as on local npm install without any arguments.</li>
-							<li>prepare: Run both BEFORE the package is packed and published, and on local npm install without any arguments. This is run AFTER prepublish, but BEFORE prepublishOnly</li>
-							<li>prepublishOnly: Run BEFORE the package is prepared and packed, ONLY on npm publish.</li>
-							<li>...<a href="https://docs.npmjs.com/misc/scripts.html">(full list here)</a></li>
-						</ul>
-						<p></p>
-						
-					</section>
+					<h4>Scripts execute automatically</h4>
+					<ul>
+						<li>prepublish: Run BEFORE the package is packed and published, as well as on local npm install without any
+							arguments.</li>
+						<li>prepare: Run both BEFORE the package is packed and published, and on local npm install without any arguments.
+							This is run AFTER prepublish, but BEFORE prepublishOnly</li>
+						<li>prepublishOnly: Run BEFORE the package is prepared and packed, ONLY on npm publish.</li>
+						<li>...<a href="https://docs.npmjs.com/misc/scripts.html">(full list here)</a></li>
+					</ul>
+					<p></p>
+
+				</section>
 				<section>
 
 					<h4>Custom Scripts</h4>
@@ -234,12 +239,14 @@
 				</section>
 			</section>
 			<section class="package-lock">
-					<h4>package-lock.json </h4>
-					<p class="size-p"> It is automatically generated for any operations where npm modifies either the node_modules tree, or package.json. 
-							The goal of the file is to keep track of the exact version of every package that is installed, especially the packages of indirect dependence. It improves the installation process.
-							</p>
-						
-				</section>
+				<h4>package-lock.json </h4>
+				<p class="size-p"> It is automatically generated for any operations where npm modifies either the node_modules
+					tree, or package.json.
+					The goal of the file is to keep track of the exact version of every package that is installed, especially the
+					packages of indirect dependence. It improves the installation process.
+				</p>
+
+			</section>
 			<section>
 				<p>Thanks for attention </p>
 				<p>sources used</p>
